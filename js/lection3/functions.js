@@ -14,15 +14,16 @@ function multiply (o1, o2) {
 	// console.log(o1 * o2);
 	return o1 * o2;
 } // функция не сработает если ее просто объявить
+// используется для того чтобы создавать методы, в приложении, а не на месте
 multiply();
 
-// function expression
+// function expression - используется когда нужно описать метод для класса
 let sum = function () {
 	console.log('new expression');
 };
 sum();
 
-// Self invoked function - самовызывающаяся функция - функция-инструкция
+// Self invoked function - самовызывающаяся функция - функция-инструкция - обычно используют когда нужно вызвать функцию здесь и сейчас
 (function () {
 	console.log('Self invoked function');
 })();
@@ -62,9 +63,22 @@ function subtraction (x = 1, y = 1, ...arg) {
 	console.log(arg);
 	return a - b;
 };
-// let subtractionResult = subtraction();
+let subtractionResult = subtraction();
 let subtractionResultWithArgs = subtraction(5, 2, 4, 8, 6);
 
-// console.log(subtractionResult);
+console.log(subtractionResult);
 
 // на самостоятельное изучение деструктуризация
+
+// Function constructor -  для того чтоб создавать объекты
+const summ = new Function('a', 'b', 'return a + b');
+
+const user = {
+	name: 'Tim',
+	age: 22
+};
+
+let {name, age} = user;
+
+console.log(name);
+console.log(age);
