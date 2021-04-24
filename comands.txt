@@ -1,1 +1,3 @@
-git checkout -b "name brash" -- создание новой ветки и переход на нее
+1. git checkout -b "name brash" -- создание новой ветки и переход на нее
+2. git checkout "name brash" -- переход на выбранную ветку
+3. git pull -- слияние веток
